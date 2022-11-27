@@ -1,0 +1,21 @@
+<div class="container mt-5">
+  <h3>Mesas</h3>
+  <p style="color:Floralwhite;">¿Desea agregar una mesa? &nbsp; <button class="btn btn-sm btn-info">Agregar mesa</button>&nbsp;</p> 
+ 
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col smaller" *ngFor='let mesa of readData'>
+      <div class="card h-%50" style="display:flexbox; padding: 1rem;">
+        <h4 class="card-title">No. Mesa {{ mesa.mesa_id}}</h4>
+        <img src="../../assets/img/mesa.png" alt="Mesa {{mesa.mesa_id}}"  style="width: 50%; height: 40%;"  class="center">
+        <em >No. de Clientes: {{mesa.mesa_clientes}}</em>
+        <div class="progress"  >
+          <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50"
+           aria-valuemin="0" aria-valuemax="100" ></div>
+        </div><br/>
+          <button routerLink="/comanda/{{ mesa.comanda_id}}" class="btn btn-sm btn-success center smaller" >Iniciar Pedido</button>
+          <button class="btn btn-sm btn-primary center smaller">Recepción de Pago</button>
+       
+      </div>
+    </div>
+  </div>
+</div>

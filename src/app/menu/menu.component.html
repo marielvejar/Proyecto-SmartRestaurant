@@ -1,0 +1,26 @@
+<section class="dishes" id="dishes">
+    <h1 class="title"> Menu de platos </h1>
+<div class="container">
+<div class="box-container">
+
+    
+    <div class="row row-cols-1 row-cols-md-3 g-4" >
+        <div class="col" *ngFor = 'let prod of readprodA'>
+          <div class="card h-100" >
+            <div class="card-body">
+              <h4 class="card-title">{{prod.nombreA}}</h4>
+              <h5>{{prod.valorA}}</h5>
+              <p class="card-text">{{prod.descripcionA}} </p>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+    </div>
+
+    
+
+</div>

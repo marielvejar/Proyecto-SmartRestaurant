@@ -1,0 +1,17 @@
+<div class="container mt-5">
+  <br /><br />
+  <h3> Conoce tu Staff</h3>
+
+
+  <div class="row mt-7 justify-content-center">
+    <div class="card card-custom mx-2 mb-3"  style="max-width: 18rem;" *ngFor='let mesero of readData'>
+      <img class="card-img-top" src="../../assets/staff/meseros/{{mesero.id}}.jpg" alt="Card image cap"  style="width: 80%; height: 40%">
+      <div class="card-body">
+        <h5 class="card-title">{{mesero.nombre}} {{mesero.apaterno}} {{mesero.amaterno}}</h5>
+        <p class="card-text"><small class="text-muted">{{mesero.puesto}}</small></p>
+        <p class="card-text">{{mesero.descripcion}}</p>
+        <p class="card-text"><small class="text-muted">Contacto: <br/> Telefono: +{{mesero.telefono}} <br/> email: {{mesero.email}}</small></p>
+      </div>
+    </div>
+
+</div>

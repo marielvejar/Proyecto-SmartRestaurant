@@ -1,0 +1,29 @@
+<section class="order" id="order">	
+  <div class="container">
+      <h1 class="title-c"> Para registrarte y obtener tus credenciales, completa el siguiente formulario </h1>
+        <form action="" [formGroup]="form" (ngSubmit)="Submit()">
+        <div class="inputBox">
+          <div class="input">
+            <span>Ingresa tu nombre de usuario *</span>
+            <input formControlName="username" type="text" placeholder="nombre de usuario">
+          </div>
+          <div class="input">
+            <span>Ingrese su email *</span>
+            <input formControlName="email" type="text" placeholder="correo electrónico">
+          </div>
+        
+        </div>
+
+        <div class="inputBox">
+          <div class="input">
+            <span>Contraseña *</span>
+            <input formControlName="password" type="password" placeholder=" No Compartiremos tu contraseña">
+          </div>
+          <div class="input">
+            <span>Repite su contraseña otra vez *</span>
+            <input type="password" placeholder="Asegúrese que es la misma">
+          </div>
+        </div>
+
+        <input type="submit" value="¡Registrate!" class="btn">
+    </form>

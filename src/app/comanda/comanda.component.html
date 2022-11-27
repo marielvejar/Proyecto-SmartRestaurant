@@ -1,0 +1,53 @@
+<div class="container mt-5" >
+  <br/><br/>
+
+<ng-container *ngIf="productos.length !=0">
+  <div class="container">
+    <div class="card-table">
+      <div class="card-product">
+        <table class="table table-light table-responsive table-hover">
+          <thead>
+            <tr>
+              <th>Sr.No</th>
+              <th>Nombre Producto</th>
+              <th>Cantidad</th>
+              <th>Valor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of productos; let i = index">
+              <td>{{i+1}}</td>
+              <td>{{item.nombre}}</td>
+              <td>1</td>
+              <td>{{item.valor | currency}}</td>
+              <td>
+                <button  (click)="removeItem(item)" class="btn btn-danger">Eliminar</button>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="3" ></td>
+              <td><strong *ngFor="let item of productos; let i = index"> Valor Total: {{grandTotal}} </strong></td>
+              <td><button (click)="emptycart()" class="btn btn-danger">Vaciar Lista</button></td>
+              <td><button routerLink="/productos" class="btn btn-primary">Agregar más</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="productos.length ==0">
+  <div class="container">
+    <div class="card">
+      <h5 class="card-title">Comanda</h5>
+    </div>
+    <div class="center">
+      <img src="../../assets/img/sinpedidos.png">
+      <h4>¡La Comanda esta vacía!</h4>
+      <h6>Agregue productos ahora</h6>
+      <button routerLink="/productos" class="btn btn-primary">Agregar</button>
+    </div>
+  </div>
+</ng-container>
+</div>

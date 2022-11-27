@@ -1,0 +1,43 @@
+h3 {
+  color: #b7b047;
+  font-size: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.card-custom {
+  max-width: 20%;
+  max-height: 80%;
+  justify-content: space-between;
+
+
+}
+
+card-body {
+  padding-block: 1rem;
+  border-radius: 1em;
+  margin-block-start: auto;
+  align-items: flex-start;
+
+}
+
+
+card-img-top {
+  padding: 1rem;
+  align-items: center;
+  position: inherit;
+  -moz-transform: scale(0.2);
+  -webkit-transform: scale(0.1);
+  transform: scale(0.1);
+  border-radius: 1em;
+
+
+}
+
+
+@media (max-width: 400px) {
+  .toggle-button {
+    column-count: 2;
+    display: flex;
+  }
+}

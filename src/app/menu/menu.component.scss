@@ -1,0 +1,54 @@
+.title {
+    padding-top: 5rem;
+	text-align: center;
+	text-transform: uppercase;
+    color:#fff;
+}
+
+.dishes .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    gap: 5rem;
+}
+.box {  
+    padding: 1rem;
+    background: #535151;
+    border-radius: .5rem;
+    border: 0.1rem solid rgba(0, 0, 0, 0.2);
+    box-shadow: var(--box-shadow);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+img {
+    height: 12rem;
+    margin: .5rem 0;
+    width: auto;
+}
+
+h3 {   
+    color: #b7b047;
+    font-size: 2rem;
+    text-transform: none;
+}
+
+.stars {
+    padding: .7rem 0;
+
+
+i {
+    font-size: 1.4rem;
+    color: #b7b047;
+}
+    }
+    span {
+    color: #b7b047;
+    font-weight: bolder;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    }
+    a {
+        font-size: 1rem;
+        font-weight: bold;
+        text-transform: none;
+    }

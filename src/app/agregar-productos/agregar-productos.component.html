@@ -1,0 +1,43 @@
+<div class="container mt-5">
+
+
+  <!-- muestra mensaje de error-->
+  <div *ngIf="errormsg" class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>{{errormsg}}</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
+  <!-- muestra mensaje de exito-->
+  <div *ngIf="successmsg" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>{{successmsg}}</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
+  <h3>Agrega Productos a tu negocio</h3>
+
+  <form [formGroup]="prodForm">
+    <div class="col-lg-4 mt-2">
+     <input type="text" class="form-control" formControlName="nombre" placeholder="Ingresa nombre de producto">
+    </div>
+    <div class="col-lg-4 mt-2">
+      <input type="text" class="form-control"  formControlName="valor" placeholder="Ingresa valor de producto">
+     </div>
+     <div class="col-lg-4 mt-2">
+      <input type="text" class="form-control" formControlName="descripcion" placeholder="Ingresa descripción">
+     </div>
+     <div class="col-lg-4 mt-2">
+      <input type="text" class="form-control" formControlName="stock" placeholder="Ingresa stock del producto">
+     </div>
+     <div class="col-lg-4 mt-2">
+      <input type="text" class="form-control" formControlName="categoria" placeholder="Ingresa categoría del producto">
+     </div>
+
+     <div class="col-lg-4 mt-2" *ngIf="!getparamid" (click)="prodSubmit()">
+       <button class="btn btn-primary bt-sm"> Añadir Producto</button>
+     </div>
+
+     <div class="col-lg-4 mt-2" *ngIf="getparamid" (click)="prodUpdate()">
+      <button class="btn btn-dark bt-sm"> Actualizar</button>
+    </div>
+  </form>
+</div>
